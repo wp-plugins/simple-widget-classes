@@ -5,7 +5,7 @@ Plugin URI: https://github.com/wpmark/simple-widget-classes
 Description: WordPress plugin to provide a text input for all widgets to add a custom class for that widget. functions.php file.
 Author: Mark Wilkinson
 Author URI: http://markwilkinson.me
-Version: 0.1
+Version: 0.2
 */
 
 class Simple_Widget_Classes {
@@ -27,7 +27,7 @@ class Simple_Widget_Classes {
 		?>
 		
 		<p>
-			<label for='widget-<?php echo $widget->id_base; ?>-<?php echo $widget->number; ?>-simple_widget_css_class'>Additional CSS Classes (space separated):
+			<label for='widget-<?php echo $widget->id_base; ?>-<?php echo $widget->number; ?>-simple_widget_css_class'><?php echo apply_filters( 'wpmark_swc_input_label', 'Additional CSS Classes (space separated)' ); ?>:
 				<input class="widefat" id="<?php echo $instance[ 'simple_widget_css_class' ]; ?>" name="widget-<?php echo $widget->id_base; ?>[<?php echo $widget->number; ?>][simple_widget_css_class]" type="text" value="<?php echo $instance[ 'simple_widget_css_class' ]; ?>" />
 			</label>							
 		</p>
